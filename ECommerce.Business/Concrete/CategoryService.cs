@@ -20,6 +20,9 @@ namespace ECommerce.Business.Concrete
 
         public async Task<List<Category>> GetAllAsync()
         {
+            //return await _categoryDal.GetList();
+
+
             var categories = await _categoryDal.GetList();
 
             categories.Insert(0, new Category { CategoryId = 0, CategoryName = "All Categories" });
